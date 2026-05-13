@@ -1,6 +1,31 @@
 # Failure Hub Playwright
+# Forensic observability framework for Playwright.
 
-Welcome to the **Failure-Hub Forensic Observability Tool**. This document provides everything you need to know to integrate high-performance, real-time forensic debugging into your automated testing pipelines.
+> A high-performance, forensic observability framework for Playwright that streams Gzipped crash data to a real-time dashboard.
+
+---
+
+## 🎥 Visual Tour
+
+<div align="center">
+  <img src="./docs/demo.mp4" alt="Failure-Hub Live Demo" width="800"/>
+  <p><em>Real-time streaming of Gzipped forensic payloads directly from the test runner.</em></p>
+</div>
+
+### 1. Dashboard Home (Failure Cards & Timelines)
+![Dashboard Home](./docs/dashboard.png)
+
+### 2. Forensic DOM Viewer
+![DOM Viewer](./docs/dom-viewer.png)
+
+### 3. Browser Console Logs & Network Errors
+![Console Logs](./docs/console-logs.png)
+
+### 4. Source Code Highlighting
+![Source Code](./docs/source-code.png)
+
+### 5. Raw Payload Viewer
+![Payload Viewer](./docs/payload-viewer.png)
 
 ---
 

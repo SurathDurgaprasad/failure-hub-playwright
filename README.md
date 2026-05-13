@@ -1,31 +1,73 @@
-# Failure Hub Playwright
-# Forensic observability framework for Playwright.
+# Failure-Hub: Forensic Observability Tool
+
+![License](https://img.shields.io/github/license/SurathDurgaprasad/failure-hub-playwright)
+![Node](https://img.shields.io/badge/node-%3E%3D20-green)
+![Playwright](https://img.shields.io/badge/playwright-supported-blue)
+![TypeScript](https://img.shields.io/badge/typescript-supported-3178C6)
 
 > A high-performance, forensic observability framework for Playwright that streams Gzipped crash data to a real-time dashboard.
 
 ---
 
-## 🎥 Visual Tour
+## Dashboard Preview
 
 <div align="center">
   <img src="./docs/demo.gif" alt="Failure-Hub Live Demo" width="800"/>
   <p><em>Real-time streaming of Gzipped forensic payloads directly from the test runner.</em></p>
 </div>
 
-### 1. Dashboard Home (Failure Cards & Timelines)
-![Dashboard Home](./docs/dashboard.png)
+<table width="100%">
+  <tr>
+    <td colspan="2" align="center">
+      <b>1. Dashboard Home (Failure Cards & Timelines)</b><br>
+      <img src="./docs/dashboard.png" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <b>2. Forensic DOM Viewer</b><br>
+      <img src="./docs/dom-viewer.png" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <b>3. Browser Console & Network Logs</b><br>
+      <img src="./docs/console-logs.png" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <b>4. Source Code Highlighting</b><br>
+      <img src="./docs/source-code.png" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <b>5. Raw Payload Viewer</b><br>
+      <img src="./docs/payload-viewer.png" width="100%">
+    </td>
+  </tr>
+</table>
 
-### 2. Forensic DOM Viewer
-![DOM Viewer](./docs/dom-viewer.png)
+---
 
-### 3. Browser Console Logs & Network Errors
-![Console Logs](./docs/console-logs.png)
+## Quick Start
 
-### 4. Source Code Highlighting
-![Source Code](./docs/source-code.png)
+```bash
+npm install
+npx playwright install
+node mock-server.js
+npx playwright test
+```
 
-### 5. Raw Payload Viewer
-![Payload Viewer](./docs/payload-viewer.png)
+---
+
+## Architecture
+
+```mermaid
+graph TD
+    A[Playwright Test] -->|Intercepts Error| B[Failure Collector]
+    B -->|Captures Context| C[Forensic Translator]
+    C -->|Redacts PII| D[Sanitization Pipeline]
+    D -->|Shrinks up to 80%| E[Gzip Compression]
+    E -->|Streams via node:fetch| F[Failure Hub Dashboard]
+```
 
 ---
 

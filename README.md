@@ -8,7 +8,7 @@
 ## 🎥 Visual Tour
 
 <div align="center">
-  <video src="./demo/demo.mp4" autoplay loop muted playsinline width="800"></video>
+  <img src="./docs/demo.gif" alt="Failure-Hub Live Demo" width="800"/>
   <p><em>Real-time streaming of Gzipped forensic payloads directly from the test runner.</em></p>
 </div>
 

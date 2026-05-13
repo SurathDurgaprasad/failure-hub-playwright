@@ -1,4 +1,4 @@
-# Failure-Hub: Forensic Observability Tool
+# Failure Hub Playwright
 
 Welcome to the **Failure-Hub Forensic Observability Tool**. This document provides everything you need to know to integrate high-performance, real-time forensic debugging into your automated testing pipelines.
 

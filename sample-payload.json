@@ -1,0 +1,39 @@
+{
+  "testName": "Login with invalid credentials",
+  "file": "tests/orangehrm-scenarios.spec.ts",
+  "line": 23,
+  "column": 7,
+  "titlePath": [
+    "",
+    "OrangeHRM Real-World Scenarios",
+    "Login with invalid credentials"
+  ],
+  "status": "failed",
+  "durationMs": 10543,
+  "retry": 0,
+  "workerIndex": 1,
+  "tags": ["@login-tests", "critical"],
+  "error": "Error: expect(received).toHaveURL(expected)\n\nExpected: /.*dashboard/\nReceived: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "stack": "    at login (c:\\my-project\\tests\\orangehrm-scenarios.spec.ts:29:21)",
+  "stdout": [],
+  "stderr": [],
+  "sourceCode": "test(\"Login with invalid credentials\", async ({ page }) => {\n  await page.goto(BASE_URL);\n  await page.fill('input', 'wrong');\n  await expect(page).toHaveURL(/.*dashboard/);\n});",
+  "screenshotBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+  "videoBase64": "",
+  "domHtml": "<html><body><h1>Login Failed</h1></body></html>",
+  "logs": "[console:error] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+  "storageKeys": {
+    "localStorage": ["theme", "***REDACTED***"],
+    "sessionStorage": ["navState"]
+  },
+  "timestamp": "2026-05-13T12:00:00.000Z",
+  "browserName": "chromium",
+  "viewport": "1280x720",
+  "envContext": {
+    "os": "Windows_NT",
+    "platform": "win32",
+    "arch": "x64",
+    "nodeVersion": "v20.10.0",
+    "ciProvider": "local"
+  }
+}
